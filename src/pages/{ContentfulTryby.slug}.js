@@ -2,10 +2,11 @@ import { graphql } from 'gatsby'
 import React from 'react'
 
 export default function tryby({data}) {
+  const content = data.contentfulTryby
   console.log(data)
   return (
     <div>
-        ok
+       {content.title}
     </div>
   )
 }
