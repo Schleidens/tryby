@@ -3,9 +3,8 @@ import * as React from "react"
 
 const IndexPage = ({ data }) => {
 
-  const { allContentfulTryby } = data;
-  const blogpost = allContentfulTryby.nodes;
-  console.log(blogpost);
+  const { nodes } = data.allContentfulTryby;
+  const blogpost = nodes;
   return (
     <>
      <main>
@@ -14,7 +13,7 @@ const IndexPage = ({ data }) => {
           <div>{blog.title}</div>
           <div>{blog.date}</div>
           {blog.tag.map(tag => (
-            <div>{tag}</div>
+            <div key={tag}>{tag}</div>
           ))}
           <img src={blog.image.url} alt="" />
         </div>
