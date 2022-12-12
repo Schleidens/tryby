@@ -1,12 +1,20 @@
 import { graphql } from 'gatsby'
 import React from 'react'
+import { renderRichText } from "gatsby-source-contentful/rich-text"
+import options from './bodyRaw'
 
 export default function tryby({data}) {
   const content = data.contentfulTryby
+
   console.log(data)
   return (
     <div>
        {content.title}
+
+       <img src={content.image.url} alt="" />
+
+       {content.body && renderRichText(content.body, options)}
+
     </div>
   )
 }
