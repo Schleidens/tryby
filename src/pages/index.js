@@ -1,24 +1,27 @@
 import { graphql } from "gatsby"
 import * as React from "react"
 
+import Layout from "../layout/layout";
+import Header from "../component/header";
+import Blog from "../component/blog";
+
 const IndexPage = ({ data }) => {
 
   const { nodes } = data.allContentfulTryby;
   const blogpost = nodes;
+
   return (
     <>
-     <main>
-      {blogpost.map(blog => (
-        <div key={blog.id}>
-          <div>{blog.title}</div>
-          <div>{blog.date}</div>
-          {blog.tag.map((tag, index) => (
-            <div key={index}>{tag}</div>
-          ))}
-          <img src={blog.image.url} alt="" />
-        </div>
+    <Layout>
+      <Header />
+    <main className="blog__section">
+
+
+    {blogpost.map((blog) => (
+        <Blog key={blog.id} img={blog.image.url} slug={blog.slug} title={blog.title} date={blog.createdAt} />
       ))}
      </main>
+    </Layout>
     </>
   )
 }
@@ -36,7 +39,7 @@ query MyQuery {
   }
   allContentfulTryby {
     nodes {
-      createdAt
+      createdAt(formatString: "dddd DD MMMM YYYY")
       date
       tag
       title
@@ -45,6 +48,7 @@ query MyQuery {
         id
         url
       }
+      slug
     }
   }
 }

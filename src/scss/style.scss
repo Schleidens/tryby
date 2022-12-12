@@ -30,6 +30,12 @@ h1,h2,h3,h4,h5,h6{
     color: $btn-color;
 }
 
+@media screen and (max-width: 768px) {
+    body{
+        margin: 0 10px 0 10px;
+    }
+}
+
 //end base style
 
 
@@ -44,6 +50,8 @@ h1,h2,h3,h4,h5,h6{
     .logo{
         color: $font-color;
         font-weight: bold;
+
+        text-transform: uppercase;
     }
 
     .nav{
@@ -77,6 +85,7 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     justify-content: center;
 
+
     margin: 10px 0px 10px 0px;
 }
 
@@ -93,4 +102,56 @@ h1,h2,h3,h4,h5,h6{
     font-size: 1.9em;
 
     text-align: left;
+}
+
+//end header style
+
+
+//blog style
+
+.blog__section{
+    display: flex;
+    flex-wrap: wrap;
+
+    height: 60vh;
+}
+
+.blog__card{
+
+    margin: 5px;
+
+    background-color: $btn-color;
+
+    border-radius: 25px;
+
+    img{
+        height: auto;
+        width: 100%;
+        max-width: 400px;
+
+        border-radius: 25px 25px 0px 0px;
+    }
+
+    .content{
+        padding: 10px;
+
+        h3{
+            font-size: 1.5em;
+            font-weight: bold;
+
+            a{color: $font-color;}
+
+            margin-bottom: 20px;
+        }
+
+        span{
+            color: white;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .blog__section{
+        justify-content: center;
+    }
 }
