@@ -26,6 +26,10 @@ h1,h2,h3,h4,h5,h6{
     padding: 0;
 }
 
+.mark{
+    color: $btn-color;
+}
+
 //end base style
 
 
@@ -74,4 +78,19 @@ h1,h2,h3,h4,h5,h6{
     justify-content: center;
 
     margin: 10px 0px 10px 0px;
+}
+
+//end layout style
+
+
+//header style
+
+.header{
+    padding: 50px 0px 50px 0px;
+
+    color: $font-color;
+
+    font-size: 1.9em;
+
+    text-align: left;
 }
