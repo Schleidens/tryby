@@ -5,7 +5,7 @@ export default function about() {
   return (
     <div>
         <Layout>
-            About
+            About page
         </Layout>
     </div>
   )
