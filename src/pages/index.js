@@ -12,8 +12,8 @@ const IndexPage = ({ data }) => {
         <div key={blog.id}>
           <div>{blog.title}</div>
           <div>{blog.date}</div>
-          {blog.tag.map(tag => (
-            <div key={tag}>{tag}</div>
+          {blog.tag.map((tag, index) => (
+            <div key={index}>{tag}</div>
           ))}
           <img src={blog.image.url} alt="" />
         </div>
