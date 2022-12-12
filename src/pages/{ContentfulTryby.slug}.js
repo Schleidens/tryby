@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import { renderRichText } from "gatsby-source-contentful/rich-text"
-import options from './bodyRaw'
+import options from '../script/bodyRaw'
 
 export default function tryby({data}) {
   const content = data.contentfulTryby
