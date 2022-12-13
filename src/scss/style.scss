@@ -4,6 +4,7 @@
 //color variables
 $font-color: #15616d;
 $btn-color: #ff7d00;
+$flat-color: #6d6875;
 
 
 //end color variables
@@ -156,5 +157,51 @@ h1,h2,h3,h4,h5,h6{
 @media screen and (max-width: 768px){
     .blog__section{
         justify-content: center;
+    }
+}
+
+//blog view css
+
+.blog__view{
+
+    padding: 100px 80px 0px 80px;
+
+    margin-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    .date{
+        font-size: 13px;
+        color: $flat-color;
+    }
+
+    .title{
+        font-size: 40px;
+        font-weight: bolder;
+
+        color: $font-color;
+
+        margin-bottom: 10px;
+    }
+
+    .content{
+        text-align: justify;
+        word-break: break-all;
+    }
+
+    .tag{
+        margin-left: 10px;
+
+        color: $btn-color;
+
+        font-style: italic;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .blog__view{
+        padding: 40px 10px 0px 10px;
     }
 }
