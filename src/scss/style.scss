@@ -205,3 +205,34 @@ h1,h2,h3,h4,h5,h6{
         padding: 40px 10px 0px 10px;
     }
 }
+
+//about page style
+
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 90vh;
+
+    p{
+        font-size: 25px;
+
+        a{
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
+
+    b{
+        font-size: 22px;
+        color: $font-color;
+    }
+
+    ul{
+        li{
+            font-size: 20px;
+            color: $font-color;
+        }
+    }
+}
