@@ -33,7 +33,7 @@ export default function layout({children}) {
 
         <div className="footer">
             <span>
-                copyright tryby 2022
+                Build with &#9829; by <a href="https://github.com/Schleidens" target="blank">Schleidens.Dev</a>
             </span>
         </div>
     </>
