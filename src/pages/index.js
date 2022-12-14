@@ -14,13 +14,13 @@ const IndexPage = ({ data }) => {
     <>
     <Layout>
       <Header />
-    <main className="blog__section">
+        <main className="blog__section">
 
 
-    {blogpost.map((blog) => (
-        <Blog key={blog.id} img={blog.image.url} slug={blog.slug} title={blog.title} date={blog.createdAt} />
-      ))}
-     </main>
+        {blogpost.map((blog) => (
+            <Blog key={blog.id} img={blog.image.url} slug={blog.slug} title={blog.title} date={blog.createdAt} />
+          ))}
+        </main>
     </Layout>
     </>
   )
@@ -32,20 +32,12 @@ export const Head = () => <title>Home Page</title>
 
 export const blogpost = graphql`
 query MyQuery {
-  allFile {
-    nodes {
-      relativePath
-    }
-  }
   allContentfulTryby {
     nodes {
       createdAt(formatString: "dddd DD MMMM YYYY")
-      date
-      tag
       title
       id
       image {
-        id
         url
       }
       slug
