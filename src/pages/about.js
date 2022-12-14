@@ -2,6 +2,9 @@ import React from 'react'
 import Layout from '../layout/layout'
 
 export default function about() {
+
+  const bar = "//"
+  
   return (
     <div>
         <Layout>
@@ -29,7 +32,7 @@ export default function about() {
               </ul>
 
               <div className="">
-               // <em>This blog follows the jamstack architecture pattern, basically it consits of using a static site generator and a Headless CMS for backend (host and fetch data from)</em>
+               {bar} <em>This blog follows the jamstack architecture pattern, basically it consits of using a static site generator and a Headless CMS for backend (host and fetch data from)</em>
               </div>
             </div>
         </Layout>
